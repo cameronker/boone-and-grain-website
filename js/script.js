@@ -111,3 +111,72 @@ if (quickViewButtons.length > 0 && productModal) {
     });
 
 }
+
+// Contact form validation
+
+const enquiryForm = document.getElementById("enquiry-form");
+
+if (enquiryForm) {
+
+    enquiryForm.addEventListener("submit", function (event) {
+
+        event.preventDefault();
+
+        const name = document.getElementById("name");
+        const email = document.getElementById("email");
+        const productType = document.getElementById("product-type");
+        const message = document.getElementById("message");
+
+        const nameError = document.getElementById("name-error");
+        const emailError = document.getElementById("email-error");
+        const productError = document.getElementById("product-error");
+        const messageError = document.getElementById("message-error");
+        const formStatus = document.getElementById("form-status");
+
+        let formIsValid = true;
+
+        // Clear previous messages
+        nameError.textContent = "";
+        emailError.textContent = "";
+        productError.textContent = "";
+        messageError.textContent = "";
+        formStatus.textContent = "";
+
+        // Validate name
+        if (name.value.trim().length < 2) {
+            nameError.textContent = "Please enter your full name.";
+            formIsValid = false;
+        }
+
+        // Validate email
+        if (!email.value.includes("@") || !email.value.includes(".")) {
+            emailError.textContent = "Please enter a valid email address.";
+            formIsValid = false;
+        }
+
+        // Validate product choice
+        if (productType.value === "") {
+            productError.textContent = "Please select a product type.";
+            formIsValid = false;
+        }
+
+        // Validate message
+        if (message.value.trim().length < 10) {
+            messageError.textContent =
+                "Please provide a little more detail about your enquiry.";
+            formIsValid = false;
+        }
+
+        // Show confirmation if valid
+        if (formIsValid) {
+
+            formStatus.textContent =
+                "Thanks! Your enquiry has been checked and is ready to send.";
+
+            enquiryForm.reset();
+
+        }
+
+    });
+
+}
