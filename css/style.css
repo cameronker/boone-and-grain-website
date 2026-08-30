@@ -628,6 +628,190 @@ textarea:focus-visible {
     text-transform: uppercase;
 }
 
+/* Product artwork */
+
+.product-image {
+    align-items: center;
+    aspect-ratio: 4 / 5;
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(255, 255, 255, 0.75),
+            transparent 45%
+        ),
+        var(--cream);
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.product-image::after {
+    bottom: 1rem;
+    color: var(--sage);
+    content: "BOONE & GRAIN";
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    position: absolute;
+}
+
+
+/* Drop earrings */
+
+.product-earrings span,
+.product-earrings span::after {
+    background:
+        linear-gradient(
+            135deg,
+            #795642,
+            #4b3428 55%,
+            #98715a
+        );
+    border-radius: 45% 45% 55% 55%;
+    box-shadow: inset 4px 0 8px rgba(255, 255, 255, 0.12);
+    height: 95px;
+    position: absolute;
+    width: 52px;
+}
+
+.product-earrings span {
+    transform: translateX(-38px) rotate(-8deg);
+}
+
+.product-earrings span::after {
+    content: "";
+    left: 76px;
+    top: 5px;
+    transform: rotate(15deg);
+}
+
+
+/* Stud earrings */
+
+.product-studs span,
+.product-studs span::after {
+    background:
+        radial-gradient(
+            circle at 35% 30%,
+            #9b765e,
+            #543a2d
+        );
+    border-radius: 50%;
+    height: 65px;
+    position: absolute;
+    width: 65px;
+}
+
+.product-studs span {
+    transform: translateX(-45px);
+}
+
+.product-studs span::after {
+    content: "";
+    left: 90px;
+}
+
+
+/* Leaf brooch */
+
+.product-leaf span {
+    background:
+        linear-gradient(
+            135deg,
+            #8a674e,
+            #4c362a
+        );
+    border-radius: 80% 15% 80% 15%;
+    box-shadow:
+        inset 5px 3px 8px rgba(255, 255, 255, 0.12);
+    height: 130px;
+    transform: rotate(-35deg);
+    width: 75px;
+}
+
+
+/* Hairpin */
+
+.product-hairpin span {
+    background:
+        linear-gradient(
+            to right,
+            #4d3529,
+            #89664d,
+            #4d3529
+        );
+    border-radius: 60% 60% 15% 15%;
+    height: 190px;
+    transform: rotate(17deg);
+    width: 18px;
+}
+
+.product-hairpin span::after {
+    background-color: #6f503d;
+    border-radius: 50%;
+    content: "";
+    height: 60px;
+    left: -21px;
+    position: absolute;
+    top: -20px;
+    width: 60px;
+}
+
+
+/* Bracelet */
+
+.product-bracelet span {
+    border: 22px solid #6c4d3b;
+    border-radius: 50%;
+    box-shadow:
+        inset 3px 3px 7px rgba(44, 33, 27, 0.2),
+        3px 5px 12px rgba(44, 33, 27, 0.12);
+    height: 140px;
+    transform: rotate(-12deg);
+    width: 140px;
+}
+
+
+/* Wattle brooch */
+
+.product-wattle span {
+    background-color: #6a4a38;
+    border-radius: 45% 55% 50% 50%;
+    height: 100px;
+    position: relative;
+    transform: rotate(20deg);
+    width: 105px;
+}
+
+.product-wattle span::before,
+.product-wattle span::after {
+    background-color: #96745a;
+    border-radius: 50%;
+    content: "";
+    height: 32px;
+    position: absolute;
+    width: 32px;
+}
+
+.product-wattle span::before {
+    left: 18px;
+    top: 15px;
+}
+
+.product-wattle span::after {
+    bottom: 15px;
+    right: 16px;
+}
+
+
+/* Current navigation page */
+
+header nav ul a[aria-current="page"] {
+    color: var(--sage);
+}
+
 /* ---------- 13. TABLET ---------- */
 
 @media (max-width: 900px) {
