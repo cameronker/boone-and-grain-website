@@ -180,3 +180,67 @@ if (enquiryForm) {
     });
 
 }
+
+// Custom order configurator
+
+const builderProduct = document.getElementById("builder-product");
+const builderTimber = document.getElementById("builder-timber");
+const builderFinish = document.getElementById("builder-finish");
+
+const builderTitle = document.getElementById("builder-summary-title");
+const builderDetails = document.getElementById("builder-summary-details");
+const builderPrice = document.getElementById("builder-price");
+
+function updateBuilder() {
+
+    if (!builderProduct || !builderTimber || !builderFinish) {
+        return;
+    }
+
+    const productOption =
+        builderProduct.options[builderProduct.selectedIndex];
+
+    const timberOption =
+        builderTimber.options[builderTimber.selectedIndex];
+
+    const finishOption =
+        builderFinish.options[builderFinish.selectedIndex];
+
+    const product = builderProduct.value;
+    const timber = builderTimber.value;
+    const finish = builderFinish.value;
+
+    if (product === "") {
+        builderTitle.textContent = "Start building your piece";
+        builderDetails.textContent =
+            "Select your options to see a personalised summary.";
+        builderPrice.textContent = "Estimated from $0";
+        return;
+    }
+
+    const productPrice = Number(productOption.dataset.price || 0);
+    const timberPrice = Number(timberOption.dataset.price || 0);
+    const finishPrice = Number(finishOption.dataset.price || 0);
+
+    const totalPrice = productPrice + timberPrice + finishPrice;
+
+    builderTitle.textContent = product;
+
+    builderDetails.textContent =
+        (timber || "Any timber") +
+        " · " +
+        (finish || "Any finish");
+
+    builderPrice.textContent =
+        "Estimated from $" + totalPrice;
+
+}
+
+
+if (builderProduct && builderTimber && builderFinish) {
+
+    builderProduct.addEventListener("change", updateBuilder);
+    builderTimber.addEventListener("change", updateBuilder);
+    builderFinish.addEventListener("change", updateBuilder);
+
+}

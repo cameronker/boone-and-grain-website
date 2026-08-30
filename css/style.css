@@ -554,6 +554,65 @@ textarea:focus-visible {
     top: 1rem;
 }
 
+/* Custom order builder */
+
+.custom-builder {
+    align-items: start;
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: 1.3fr 0.7fr;
+}
+
+.builder-options {
+    display: grid;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.builder-options label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.4rem;
+    text-transform: uppercase;
+}
+
+.builder-options select {
+    background-color: var(--light-cream);
+    border: 1px solid rgba(75, 52, 40, 0.3);
+    color: var(--charcoal);
+    font: inherit;
+    padding: 0.9rem 1rem;
+    width: 100%;
+}
+
+.builder-summary {
+    background-color: var(--dark-walnut);
+    color: var(--cream);
+    padding: 2.5rem;
+}
+
+.builder-summary h3 {
+    color: var(--cream);
+}
+
+.builder-summary>p:first-child {
+    color: var(--light-sage);
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+#builder-price {
+    border-top: 1px solid rgba(244, 239, 230, 0.25);
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+}
+
 /* ---------- 13. TABLET ---------- */
 
 @media (max-width: 900px) {
@@ -577,6 +636,10 @@ textarea:focus-visible {
 
     .product-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .custom-builder {
+    grid-template-columns: 1fr;
     }
 
 }

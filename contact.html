@@ -39,7 +39,61 @@
         </section>
 
         <section>
+            <section class="custom-builder" aria-labelledby="builder-heading">
+                <div>
+                    <p>Custom Piece Builder</p>
+                    <h2 id="builder-heading">Plan Your Piece</h2>
 
+                    <p>
+                        Choose a product, timber and finish to preview your custom
+                        piece and estimated starting price.
+                    </p>
+
+                    <div class="builder-options">
+
+                        <div>
+                            <label for="builder-product">Product</label>
+                            <select id="builder-product">
+                                <option value="">Choose a product</option>
+                                <option value="Earrings" data-price="42">Earrings</option>
+                                <option value="Brooch" data-price="38">Brooch</option>
+                                <option value="Hairpin" data-price="36">Hairpin</option>
+                                <option value="Bracelet" data-price="55">Bracelet</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="builder-timber">Timber</label>
+                            <select id="builder-timber">
+                                <option value="">Choose timber</option>
+                                <option value="Walnut" data-price="0">Walnut</option>
+                                <option value="Oak" data-price="3">Oak</option>
+                                <option value="River Gum" data-price="5">River Gum</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="builder-finish">Finish</label>
+                            <select id="builder-finish">
+                                <option value="">Choose finish</option>
+                                <option value="Natural" data-price="0">Natural</option>
+                                <option value="Satin" data-price="5">Satin</option>
+                                <option value="Polished" data-price="8">Polished</option>
+                            </select>
+                        </div>
+
+                    </div>
+                </div>
+
+                <aside class="builder-summary" aria-live="polite">
+                    <p>Your Selection</p>
+                    <h3 id="builder-summary-title">Start building your piece</h3>
+                    <p id="builder-summary-details">
+                        Select your options to see a personalised summary.
+                    </p>
+                    <p id="builder-price">Estimated from $0</p>
+                </aside>
+            </section>
             <h2>Send an Enquiry</h2>
 
             <form id="enquiry-form" novalidate>
@@ -86,13 +140,8 @@
                 <div>
                     <label for="message">Tell Harriet About Your Idea</label>
 
-                    <textarea
-                        id="message"
-                        name="message"
-                        rows="6"
-                        required
-                        placeholder="Describe the piece, style, occasion or any ideas you have..."
-                    ></textarea>
+                    <textarea id="message" name="message" rows="6" required
+                        placeholder="Describe the piece, style, occasion or any ideas you have..."></textarea>
 
                     <small class="error-message" id="message-error"></small>
                 </div>
