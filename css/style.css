@@ -613,6 +613,21 @@ textarea:focus-visible {
     padding-top: 1.5rem;
 }
 
+/* Mobile navigation button */
+
+.menu-toggle {
+    background: none;
+    border: 1px solid var(--walnut);
+    color: var(--walnut);
+    cursor: pointer;
+    display: none;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    padding: 0.7rem 1rem;
+    text-transform: uppercase;
+}
+
 /* ---------- 13. TABLET ---------- */
 
 @media (max-width: 900px) {
@@ -639,7 +654,7 @@ textarea:focus-visible {
     }
 
     .custom-builder {
-    grid-template-columns: 1fr;
+        grid-template-columns: 1fr;
     }
 
 }
@@ -658,10 +673,37 @@ textarea:focus-visible {
         padding-right: 1.25rem;
     }
 
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        right: 1.25rem;
+        top: 1.25rem;
+    }
+
+    header nav {
+        position: relative;
+    }
+
     header nav ul {
-        align-items: flex-start;
+        display: none;
         flex-direction: column;
+        gap: 0;
+        padding-top: 1rem;
         width: 100%;
+    }
+
+    header nav ul.open {
+        display: flex;
+    }
+
+    header nav ul li {
+        border-top: 1px solid rgba(75, 52, 40, 0.12);
+        width: 100%;
+    }
+
+    header nav ul a {
+        display: block;
+        padding: 1rem 0;
     }
 
     h1 {
