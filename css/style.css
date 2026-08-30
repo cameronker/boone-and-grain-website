@@ -82,7 +82,7 @@ p {
     margin-bottom: 1rem;
 }
 
-section > p:first-child:not(:last-child) {
+section>p:first-child:not(:last-child) {
     color: var(--sage);
     font-size: 0.75rem;
     font-weight: 700;
@@ -112,7 +112,7 @@ header nav {
     padding: 0 2rem;
 }
 
-header nav > a:first-child {
+header nav>a:first-child {
     color: var(--dark-walnut);
     font-family: var(--serif);
     font-size: 1.55rem;
@@ -158,17 +158,17 @@ header nav ul a:focus::after {
 
 /* ---------- 5. GENERAL PAGE LAYOUT ---------- */
 
-main > section {
+main>section {
     margin: 0 auto;
     max-width: var(--max-width);
     padding: 6rem 2rem;
 }
 
-main > section + section {
+main>section+section {
     border-top: 1px solid rgba(75, 52, 40, 0.12);
 }
 
-main > section:first-child {
+main>section:first-child {
     align-items: flex-start;
     display: flex;
     flex-direction: column;
@@ -178,7 +178,7 @@ main > section:first-child {
     padding-top: 7rem;
 }
 
-main > section:first-child > p:not(:first-child) {
+main>section:first-child>p:not(:first-child) {
     font-family: var(--serif);
     font-size: 1.2rem;
     margin-top: 2rem;
@@ -188,8 +188,8 @@ main > section:first-child > p:not(:first-child) {
 
 /* ---------- 6. LINKS & BUTTONS ---------- */
 
-main section > a,
-article > a {
+main section>a,
+article>a {
     align-items: center;
     background-color: var(--dark-walnut);
     border: 1px solid var(--dark-walnut);
@@ -210,8 +210,8 @@ article > a {
         transform var(--transition);
 }
 
-main section > a:hover,
-article > a:hover {
+main section>a:hover,
+article>a:hover {
     background-color: transparent;
     color: var(--dark-walnut);
     transform: translateY(-2px);
@@ -230,9 +230,9 @@ main section:has(> article) {
     grid-template-columns: repeat(3, 1fr);
 }
 
-main section:has(> article) > h2,
-main section:has(> article) > p,
-main section:has(> article) > a {
+main section:has(> article)>h2,
+main section:has(> article)>p,
+main section:has(> article)>a {
     grid-column: 1 / -1;
 }
 
@@ -312,11 +312,9 @@ main section:has(> article) article:hover {
     align-items: center;
     aspect-ratio: 4 / 5;
     background:
-        radial-gradient(
-            circle at center,
+        radial-gradient(circle at center,
             rgba(125, 137, 114, 0.18),
-            transparent 45%
-        ),
+            transparent 45%),
         var(--cream);
     display: flex;
     justify-content: center;
@@ -344,7 +342,7 @@ main section:has(> article) article:hover {
     text-transform: uppercase;
 }
 
-.product-card > p:first-of-type {
+.product-card>p:first-of-type {
     color: var(--sage);
     font-size: 0.7rem;
     font-weight: 700;
@@ -352,7 +350,7 @@ main section:has(> article) article:hover {
     text-transform: uppercase;
 }
 
-.product-card > p:last-of-type {
+.product-card>p:last-of-type {
     color: var(--walnut);
     font-family: var(--serif);
     font-size: 1.25rem;
@@ -388,7 +386,7 @@ main section:has(> article) article:hover {
     padding: 3rem;
 }
 
-#enquiry-form > div {
+#enquiry-form>div {
     margin-bottom: 1.5rem;
 }
 
@@ -465,8 +463,8 @@ footer {
     padding: 3rem 2rem;
 }
 
-footer > p,
-footer > nav {
+footer>p,
+footer>nav {
     margin-left: auto;
     margin-right: auto;
     max-width: var(--max-width);
@@ -500,6 +498,61 @@ textarea:focus-visible {
     outline-offset: 4px;
 }
 
+/* Product quick-view modal */
+
+.product-modal {
+    align-items: center;
+    background-color: rgba(44, 33, 27, 0.7);
+    display: none;
+    inset: 0;
+    justify-content: center;
+    padding: 1.5rem;
+    position: fixed;
+    z-index: 2000;
+}
+
+.product-modal.open {
+    display: flex;
+}
+
+.modal-content {
+    background-color: var(--light-cream);
+    max-width: 520px;
+    padding: 3rem;
+    position: relative;
+    width: 100%;
+}
+
+.modal-content>p:first-of-type {
+    color: var(--sage);
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+}
+
+.modal-content h2 {
+    margin-bottom: 1rem;
+}
+
+#modal-price {
+    color: var(--walnut);
+    font-family: var(--serif);
+    font-size: 1.4rem;
+    margin-top: 1.5rem;
+}
+
+.modal-close {
+    background: none;
+    border: none;
+    color: var(--dark-walnut);
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    position: absolute;
+    right: 1.2rem;
+    top: 1rem;
+}
 
 /* ---------- 13. TABLET ---------- */
 
@@ -556,11 +609,11 @@ textarea:focus-visible {
         font-size: 2.3rem;
     }
 
-    main > section {
+    main>section {
         padding: 4rem 1.25rem;
     }
 
-    main > section:first-child {
+    main>section:first-child {
         min-height: auto;
         padding-bottom: 5rem;
         padding-top: 5rem;
