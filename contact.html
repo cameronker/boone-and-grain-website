@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Contact Boone & Grain to enquire about handcrafted wooden jewellery and custom orders.">
+    <title>Order & Contact | Boone & Grain</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <nav aria-label="Main navigation">
+            <a href="index.html">Boone & Grain</a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="products.html">Products</a></li>
+                <li><a href="contact.html">Order & Contact</a></li>
+                <li><a href="blog.html">Journal</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <p>Custom Orders & Enquiries</p>
+            <h1>Let's Create Something Unique.</h1>
+
+            <p>
+                Have a particular timber, shape or occasion in mind?
+                Send Harriet an enquiry and start planning a custom piece.
+            </p>
+        </section>
+
+        <section>
+
+            <h2>Send an Enquiry</h2>
+
+            <form id="enquiry-form" novalidate>
+
+                <div>
+                    <label for="name">Full Name</label>
+                    <input type="text" id="name" name="name" required>
+                    <small class="error-message" id="name-error"></small>
+                </div>
+
+                <div>
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
+                    <small class="error-message" id="email-error"></small>
+                </div>
+
+                <div>
+                    <label for="product-type">Product Type</label>
+
+                    <select id="product-type" name="product-type" required>
+                        <option value="">Select a product</option>
+                        <option value="earrings">Earrings</option>
+                        <option value="brooch">Brooch</option>
+                        <option value="hairpin">Hairpin</option>
+                        <option value="bracelet">Bracelet</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <small class="error-message" id="product-error"></small>
+                </div>
+
+                <div>
+                    <label for="timber">Preferred Timber</label>
+
+                    <select id="timber" name="timber">
+                        <option value="">No preference</option>
+                        <option value="walnut">Walnut</option>
+                        <option value="oak">Oak</option>
+                        <option value="rivergum">River Gum</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="message">Tell Harriet About Your Idea</label>
+
+                    <textarea
+                        id="message"
+                        name="message"
+                        rows="6"
+                        required
+                        placeholder="Describe the piece, style, occasion or any ideas you have..."
+                    ></textarea>
+
+                    <small class="error-message" id="message-error"></small>
+                </div>
+
+                <button type="submit">Send Enquiry</button>
+
+                <p id="form-status" role="status" aria-live="polite"></p>
+
+            </form>
+
+        </section>
+
+        <section>
+            <h2>What Happens Next?</h2>
+
+            <article>
+                <h3>1. Send Your Idea</h3>
+                <p>
+                    Tell Harriet what you are looking for through the enquiry form.
+                </p>
+            </article>
+
+            <article>
+                <h3>2. Discuss the Details</h3>
+                <p>
+                    Harriet will discuss suitable materials, design options,
+                    pricing and expected completion time.
+                </p>
+            </article>
+
+            <article>
+                <h3>3. Handmade in Adelaide</h3>
+                <p>
+                    Once the design is confirmed, your piece will be created
+                    by hand in the Boone & Grain workshop.
+                </p>
+            </article>
+        </section>
+
+        <section>
+            <h2>Business Enquiries</h2>
+
+            <p>
+                For collaborations, stockist enquiries or media opportunities,
+                contact Boone & Grain through the form above.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Boone & Grain. Handcrafted in Adelaide, South Australia.</p>
+
+        <nav aria-label="Footer navigation">
+            <a href="contact.html">Contact</a>
+            <a href="#">Instagram</a>
+            <a href="#">YouTube</a>
+        </nav>
+    </footer>
+
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>
